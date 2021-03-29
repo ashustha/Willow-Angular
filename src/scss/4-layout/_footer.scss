@@ -1,0 +1,110 @@
+footer {
+  background-color: $black;
+  padding: 50px 0px;
+  .newsletter {
+    .newsletter-text {
+      text-align: right;
+      text-transform: uppercase;
+      font-family: Rufina-Regular;
+      font-size: 1.8em;
+      color: $medium-grey;
+      line-height: 30px;
+    }
+    .newsletter-text-detail {
+      text-align: right;
+      font-size: 1.4em;
+      color: $light-grey;
+      margin-bottom: 10px;
+    }
+
+    &-email-input {
+      background-color: transparent;
+      border-radius: 40px;
+      height: 50px;
+      border-color: $medium-grey;
+      padding: 10px 20px;
+      color: $white;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    .input-group {
+      width: 75%;
+      .newsletter-email-input {
+        &:focus {
+          background-color: transparent;
+          border-color: $white;
+        }
+      }
+    }
+
+    &-signup-button {
+      border-radius: 40px;
+      background-color: $dark-grey;
+      color: $white;
+      text-transform: uppercase;
+      font-family: Rufina-Regular;
+      letter-spacing: 0.5px;
+      border-top-left-radius: 40px !important;
+      border-bottom-left-radius: 40px !important;
+      position: absolute;
+      height: 50px;
+      right: -55px;
+      border: none;
+      padding: 10px 30px;
+      cursor: pointer;
+      z-index: 9;
+    }
+  }
+
+  .copyright {
+    margin-bottom: 10px;
+    color: $light-grey;
+    font-size: 1.2em;
+    letter-spacing: 0.5px;
+  }
+
+  hr {
+    margin: 30px 0px;
+    color: $light-grey;
+  }
+
+  .socials {
+    margin-bottom: 10px;
+    ul {
+      text-align: center;
+      li {
+        display: inline-block;
+
+        margin-right: 10px;
+        &:last-child {
+          margin-right: 0px;
+        }
+        a {
+          color: $light-grey;
+          &:hover {
+            color: $medium-grey;
+          }
+        }
+      }
+    }
+  }
+
+  .powered-by {
+    text-align: right;
+    margin-bottom: 10px;
+    h4 {
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 1.6em;
+      font-weight: 700;
+      color: $light-grey;
+      margin-right: 5px;
+    }
+
+    .fa-globe {
+      color: $light-grey;
+    }
+  }
+}

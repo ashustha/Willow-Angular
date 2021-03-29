@@ -1,0 +1,80 @@
+@import "./../../../../scss/1-helpers/variables";
+@import "./../../../../scss/3-basics/typography";
+
+#events {
+  .page-title {
+    text-align: center;
+    font-family: Rufina-Regular;
+    position: relative;
+    font-size: 30px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    &:after {
+      position: absolute;
+      content: "";
+      background-color: $light-grey;
+      width: 20px;
+      height: 1px;
+      bottom: -20px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+  }
+
+  .nav {
+    border-bottom: none;
+    .nav-link {
+      font-size: 18px;
+      color: $light-grey;
+      &.active {
+        color: $dark-grey;
+        border: none;
+      }
+    }
+  }
+
+  .tab-content {
+    padding: 50px 0px;
+    .event {
+      padding-bottom: 25px;
+      margin-bottom: 45px;
+      border-bottom: 1px solid $light-grey;
+      &:last-child {
+        border-bottom: none;
+      }
+      .event_time-place {
+        text-align: right;
+        font-size: 16px;
+        font-family: Rufina-Regular;
+        line-height: 25px;
+        margin-bottom: 15px;
+        .event_date-time {
+          margin-bottom: 15px;
+        }
+      }
+
+      .event_image {
+        margin-bottom: 15px;
+      }
+
+      .event_desc {
+        .event_title {
+          font-family: Rufina-Regular;
+          font-size: 18px;
+          line-height: 25px;
+          letter-spacing: 0.35px;
+          color: $dark-grey;
+          margin-bottom: 10px;
+        }
+        .event_desc {
+          line-height: 25px;
+          color: $medium-grey;
+          letter-spacing: 0.35px;
+          font-size: 14px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

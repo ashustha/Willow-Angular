@@ -1,0 +1,74 @@
+@import "./../../../../scss/1-helpers/variables";
+@import "./../../../../scss/3-basics/typography";
+
+#contact {
+  .page-title {
+    text-align: center;
+    font-family: Rufina-Regular;
+    position: relative;
+    font-size: 30px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    &:after {
+      position: absolute;
+      content: "";
+      background-color: $light-grey;
+      width: 20px;
+      height: 1px;
+      bottom: -20px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+  }
+
+  .page-content {
+    .contactDetail {
+      .contact-info {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 40px;
+        .contact-info_icon {
+          background-color: $dark-grey;
+          color: $white;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 20px;
+        }
+        .contact-info_title {
+          h3 {
+            font-family: Rufina-Regular;
+            line-height: 22px;
+            size: 18px;
+            color: $dark-grey;
+            margin-bottom: 15px;
+          }
+          p {
+            font-size: 14px;
+            color: $medium-grey;
+            letter-spacing: 0.35px;
+          }
+        }
+      }
+    }
+  }
+
+  .form-control {
+    border: none;
+    border-radius: 0px;
+    border-bottom: 1px solid $light-grey;
+  }
+
+  .secondary-button {
+    font-size: 16px;
+    padding: 10px 25px;
+  }
+
+  .invalid-feedback p {
+    font-size: 12px;
+  }
+}

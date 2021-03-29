@@ -1,0 +1,53 @@
+@import "./../../../../scss/1-helpers/variables";
+@import "./../../../../scss/3-basics/typography";
+
+#about {
+  .page-title {
+    text-align: center;
+    font-family: Rufina-Regular;
+    position: relative;
+    font-size: 30px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    &:after {
+      position: absolute;
+      content: "";
+      background-color: $light-grey;
+      width: 20px;
+      height: 1px;
+      bottom: -20px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+  }
+
+  .page-description {
+    .title {
+      font-size: 24px;
+      line-height: 30px;
+      font-family: Rufina-Regular;
+      text-transform: uppercase;
+      color: $dark-grey;
+      letter-spacing: 0.5px;
+      text-align: right;
+      margin-bottom: 15px;
+    }
+    .description {
+      font-size: 14px;
+      line-height: 25px;
+      color: $light-grey;
+      letter-spacing: 0.3px;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  #about {
+    .page-description {
+      .title {
+        text-align: left;
+      }
+    }
+  }
+}

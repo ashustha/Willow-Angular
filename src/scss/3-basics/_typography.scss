@@ -1,0 +1,23 @@
+@font-face {
+  font-family: Rufina-Regular;
+  src: url(#{$fontPath}/Rufina-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Rufina-Bold;
+  src: url(#{$fontPath}/Rufina-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Oxygen-Regular;
+  src: url(#{$fontPath}/Oxygen-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Oxygen-Light;
+  src: url(#{$fontPath}/Oxygen-Light.ttf);
+  font-weight: 300;
+}
