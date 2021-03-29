@@ -1,0 +1,57 @@
+<section id="events">
+  <div class="container">
+    <h1 class="page-title">Events</h1>
+    <div class="page-content">
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="tab" href="#upcoming"
+            >Upcoming</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#recent">Recent</a>
+        </li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div class="tab-pane container active" id="upcoming">
+          <div class="row event" *ngFor="let item of events">
+            <div class="col-lg-3">
+              <div class="event_time-place">
+                <div class="event_date-time">
+                  <p>
+                    {{ item.date }} / {{ item.time }}
+                    <i class="far fa-calendar-alt"></i>
+                  </p>
+                </div>
+                <div class="event_place">
+                  <p>
+                    {{ item.place }}
+                    <i class="fas fa-map-marker-alt"></i>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <div class="event_image">
+                <img [src]="item.image" alt="" />
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="event_desc">
+                <h2 class="event_title">{{ item.title }}</h2>
+                <p class="event_desc">
+                  {{ item.description }}
+                </p>
+                <button class="btn secondary-button">Read More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane container fade" id="recent"></div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,60 @@
+.primary-button {
+  color: $white;
+  background-color: $black;
+  font-family: Rufina-Regular;
+  padding: 10px 45px;
+  font-size: 2.2em;
+  border-radius: 50px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+    border-radius: 50px;
+    z-index: 1;
+  }
+  &:hover {
+    color: #fff;
+    &:before {
+      width: 100%;
+    }
+  }
+}
+
+.secondary-button {
+  color: $black;
+  border-radius: 50px;
+  font-size: 1.4em;
+  border-color: $black;
+  background-color: transparent;
+  padding: 5px 15px;
+  font-family: Rufina-Regular;
+  position: relative;
+  overflow: hidden;
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: darken($black, 15%);
+    transition: all 0.3s;
+    border-radius: 50px;
+    z-index: -1;
+  }
+  &:hover {
+    color: #fff;
+    &:before {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,112 @@
+.section-title {
+  border-bottom: 1px solid $light-grey;
+  margin-bottom: 50px;
+}
+#news {
+  .news {
+    &-image {
+      position: relative;
+      img {
+        margin-bottom: 40px;
+      }
+      .date-wrapper {
+        position: absolute;
+        background-color: $black;
+        width: 80px;
+        height: 80px;
+        color: $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        bottom: 3px;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        p {
+          text-align: center;
+          .month {
+            display: block;
+            font-size: 1.6em;
+          }
+          .date {
+            display: block;
+            font-size: 3em;
+            line-height: 25px;
+            font-family: Rufina-Regular;
+          }
+        }
+      }
+    }
+    &-text {
+      width: 80%;
+      margin: 20px auto;
+      p {
+        font-size: 1.2em;
+        text-align: center;
+      }
+    }
+    .action-button {
+      text-align: center;
+    }
+  }
+}
+
+#reviews {
+  margin-bottom: 100px;
+  .review {
+    .reviewer {
+      text-align: center;
+      position: relative;
+      ::after {
+        position: absolute;
+        content: "";
+        width: 35px;
+        height: 2px;
+        background-color: $light-grey;
+        bottom: -20px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+      }
+      &-image {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        img {
+          object-fit: cover;
+        }
+      }
+      &-name {
+        margin-bottom: 10px;
+        h4 {
+          font-size: 1.6em;
+          font-family: Rufina-Regular;
+        }
+      }
+      &-stars {
+        margin-bottom: 40px;
+        ul {
+          li {
+            display: inline-block;
+          }
+        }
+      }
+    }
+    &-text {
+      width: 80%;
+      margin: 0 auto;
+      p {
+        text-align: center;
+        font-size: 1.4em;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+    }
+  }
+}

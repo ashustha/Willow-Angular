@@ -1,0 +1,22 @@
+<section id="about">
+  <div class="container">
+    <h1 class="page-title">About</h1>
+    <div class="page-content">
+      <div class="page-image mb-5">
+        <img src="./../.././../../assets/images/restro.jfif" alt="Restro" />
+      </div>
+      <div class="page-description">
+        <div class="row mb-5" *ngFor="let item of about">
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <h2 class="title">{{ item.title }}</h2>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+            <p class="description">
+              {{ item.description }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

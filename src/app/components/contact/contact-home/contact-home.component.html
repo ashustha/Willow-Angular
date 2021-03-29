@@ -1,0 +1,118 @@
+<section id="contact">
+  <div class="container">
+    <h1 class="page-title">Contact Us</h1>
+    <div class="page-content">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+          <div class="contactDetail">
+            <ul>
+              <li class="contact-info">
+                <div class="contact-info_icon">
+                  <i class="fas fa-2x fa-phone-volume"></i>
+                </div>
+                <div class="contact-info_title">
+                  <h3>Phone</h3>
+                  <p>807-119-3031</p>
+                </div>
+              </li>
+              <li class="contact-info">
+                <div class="contact-info_icon">
+                  <i class="fas fa-2x fa-map-marker-alt"></i>
+                </div>
+                <div class="contact-info_title">
+                  <h3>Location</h3>
+                  <p>3305 Rey Drives Apt. 274</p>
+                </div>
+              </li>
+              <li class="contact-info">
+                <div class="contact-info_icon">
+                  <i class="fas fa-2x fa-envelope"></i>
+                </div>
+                <div class="contact-info_title">
+                  <h3>Info</h3>
+                  <p>marvin.malcolm@yahoo.com</p>
+                </div>
+              </li>
+              <li class="contact-info">
+                <div class="contact-info_icon">
+                  <i class="far fa-2x fa-clock"></i>
+                </div>
+                <div class="contact-info_title">
+                  <h3>Hours</h3>
+                  <p>Tuesday</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+          <form [formGroup]="messageForm">
+            <div class="form-group">
+              <input
+                type="text"
+                placeholder="Name"
+                class="form-control"
+                formControlName="name"
+                [ngClass]="{ 'is-invalid': submitted && f.name.errors }"
+              />
+              <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                <p *ngIf="f.name.errors.required">Name is required</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    placeholder="Email"
+                    class="form-control"
+                    formControlName="email"
+                    [ngClass]="{ 'is-invalid': submitted && f.name.errors }"
+                  />
+                  <div
+                    *ngIf="submitted && f.email.errors"
+                    class="invalid-feedback"
+                  >
+                    <p *ngIf="f.email.errors.required">Email is required</p>
+                    <p *ngIf="f.email.errors.email">
+                      Email must be a valid email address
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    placeholder="Phone"
+                    class="form-control"
+                    formControlName="phone"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <textarea
+                class="form-control"
+                placeholder="Message"
+                cols="30"
+                rows="10"
+                formControlName="message"
+                [ngClass]="{ 'is-invalid': submitted && f.message.errors }"
+              ></textarea>
+              <div
+                *ngIf="submitted && f.message.errors"
+                class="invalid-feedback"
+              >
+                <p *ngIf="f.message.errors.required">Message is required</p>
+              </div>
+            </div>
+            <button class="btn secondary-button" (click)="onSubmit()">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
